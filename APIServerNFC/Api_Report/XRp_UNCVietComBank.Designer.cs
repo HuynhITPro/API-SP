@@ -89,7 +89,6 @@
             this.xrRichText25 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrTableCell20 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrRichText26 = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCheckBox2 = new DevExpress.XtraReports.UI.XRCheckBox();
             this.xrCheckBox1 = new DevExpress.XtraReports.UI.XRCheckBox();
             this.xrRichText21 = new DevExpress.XtraReports.UI.XRRichText();
@@ -159,7 +158,6 @@
             this.xrLabel2,
             this.xrTable1,
             this.xrTable2,
-            this.xrLabel1,
             this.xrCheckBox2,
             this.xrCheckBox1,
             this.xrRichText21,
@@ -203,7 +201,7 @@
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
             new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(163)))});
             this.xrLabel2.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(1984.257F, 947.2747F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(1982.047F, 997.5455F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -387,7 +385,7 @@
             // xrTable2
             // 
             this.xrTable2.Dpi = 254F;
-            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(61.98782F, 218.2561F);
+            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(87.38793F, 218.2561F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -939,22 +937,6 @@
             this.xrRichText26.StylePriority.UseBorders = false;
             this.xrRichText26.StylePriority.UsePadding = false;
             // 
-            // xrLabel1
-            // 
-            this.xrLabel1.Dpi = 254F;
-            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([NguoiThanhToan]!=\'\',\'ĐÃ THANH TOÁN\',\'\')")});
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 14.1F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
-            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(163)))});
-            this.xrLabel1.ForeColor = System.Drawing.Color.Red;
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(61.98782F, 789.756F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(495.3F, 55.83295F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UseForeColor = false;
-            // 
             // xrCheckBox2
             // 
             this.xrCheckBox2.Dpi = 254F;
@@ -999,11 +981,11 @@
             this.xrRichText20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText20.Dpi = 254F;
             this.xrRichText20.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.xrRichText20.LocationFloat = new DevExpress.Utils.PointFloat(43.06226F, 973.733F);
+            this.xrRichText20.LocationFloat = new DevExpress.Utils.PointFloat(77.31137F, 973.733F);
             this.xrRichText20.Name = "xrRichText20";
             this.xrRichText20.Padding = new DevExpress.XtraPrinting.PaddingInfo(8, 8, 8, 8, 254F);
             this.xrRichText20.SerializableRtfString = resources.GetString("xrRichText20.SerializableRtfString");
-            this.xrRichText20.SizeF = new System.Drawing.SizeF(831.85F, 103.0816F);
+            this.xrRichText20.SizeF = new System.Drawing.SizeF(797.6008F, 103.0817F);
             this.xrRichText20.StylePriority.UseBorders = false;
             this.xrRichText20.StylePriority.UseFont = false;
             this.xrRichText20.StylePriority.UsePadding = false;
@@ -1012,9 +994,9 @@
             // 
             this.xrLine2.Dpi = 254F;
             this.xrLine2.LineWidth = 2F;
-            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(36.71237F, 967.5948F);
+            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(61.44001F, 967.5948F);
             this.xrLine2.Name = "xrLine2";
-            this.xrLine2.SizeF = new System.Drawing.SizeF(1943.1F, 6.138367F);
+            this.xrLine2.SizeF = new System.Drawing.SizeF(1915.315F, 6.138367F);
             // 
             // xrRichText19
             // 
@@ -1100,9 +1082,9 @@
             // xrLine1
             // 
             this.xrLine1.Dpi = 254F;
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(37.76198F, 196.6853F);
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(61.44001F, 196.6853F);
             this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(1943.1F, 5.080002F);
+            this.xrLine1.SizeF = new System.Drawing.SizeF(1915.315F, 5.080002F);
             // 
             // xrPictureBox1
             // 
@@ -1136,11 +1118,11 @@
             this.xrCrossBandBox1.BorderColor = System.Drawing.Color.Black;
             this.xrCrossBandBox1.Dpi = 254F;
             this.xrCrossBandBox1.EndBand = this.Detail;
-            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(38.9468F, 1397F);
+            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(61.43637F, 1397F);
             this.xrCrossBandBox1.Name = "xrCrossBandBox1";
             this.xrCrossBandBox1.StartBand = this.Detail;
-            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(38.9468F, 45.97864F);
-            this.xrCrossBandBox1.WidthF = 1943.1F;
+            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(61.43637F, 45.97862F);
+            this.xrCrossBandBox1.WidthF = 1920.61F;
             // 
             // SoTKNo
             // 
@@ -1273,7 +1255,6 @@
         private DevExpress.XtraReports.UI.XRRichText xrRichText25;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell20;
         private DevExpress.XtraReports.UI.XRRichText xrRichText26;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRCheckBox xrCheckBox2;
         private DevExpress.XtraReports.UI.XRCheckBox xrCheckBox1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText21;
