@@ -1,0 +1,255 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "NFCDBContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Model",
+   "ProjectRootNamespace": "APIServerNFC",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Android_ScanTempKTP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ArticleNumberProduct]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ArticleNumberProduct_Gia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ChiTiet_KhuVuc]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DataDropDownList]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DeviceIDAndroid]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DonHang_HoSoPO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DonHang_PIForm]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DonHang_PISuaDoi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DonHang_QCKiem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DonHang_SoHD]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DonHangMua]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmailList]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[File_ofSoft]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FileHoSo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice_HoSo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice_ItemOther]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvoiceItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KeHoach_Job]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KeHoach_NCCChungTu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KeHoach_NCCItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KeHoach_NCCItemSP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KeHoachXuatHang]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KeHoachXuatHang_del]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhachHang]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhachHang_Shipto]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoChoRap]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoChoSon]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_ChungTu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_ChuyenPO_Log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_HCLyDo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_InfoArt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_Intem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_NK]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_NK_del]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_NXNoiBo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_ScanCT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_ScanItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_SoDo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_TemPallet]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_ViTri]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KhoTP_XK]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[KV4_TonMB]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LichLamViec]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MaMau]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NhaCungCap]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NhaCungCap_FileHoSo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OS_DonGia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PhieuNhanDang]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SanPham]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SanPham_ChiTiet]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SanPham_PhanHe]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[testabc]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Users]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "huynhit-pc\\sqlexpress.NFCDB.dbo",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

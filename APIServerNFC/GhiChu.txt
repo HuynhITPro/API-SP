@@ -1,0 +1,12 @@
+﻿Lưu ý: phải share folder trong IIS, và phải cấp quyền cho user IIS truy cập được
+HƯỚNG DẪN PUBLISH API
+1. Cài dotnet-sdk-5.0.408-win-x64
+2. DotNetCore 6.0-WindowsBundleHosting (https://viblo.asia/p/trien-khai-ung-dung-aspnet-core-tren-iis-924lJYBXZPM)
+3. Cài IIS
+4. publish API
+5. Sửa file Web.config
+6. Trong IIS vào Application Pools--->Edit ApplicationPool--->Trong .Net CLR version chọn No Manged code 
+
+Debug API trong máy ảo android cần chuyển localhost về IP 127.0.0.1:PORT và ANDROID thành  http://10.0.2.2:PORT
+https://stackoverflow.com/questions/6760585/accessing-localhostport-from-android-emulator
+I faced the same issue on Visual Studio executing an web app on IIS Express. to fix it you need to go to your project properties then click on Debug Tab and change http://localhost:[YOUR PORT] to http://127.0.0.1:[YOUR PORT] and set the android url to http://10.0.2.2:[YOUR PORT]. it worked for me.
