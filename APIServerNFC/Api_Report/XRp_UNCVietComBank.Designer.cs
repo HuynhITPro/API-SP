@@ -34,7 +34,6 @@
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrRichText16 = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -93,7 +92,6 @@
             this.xrCheckBox1 = new DevExpress.XtraReports.UI.XRCheckBox();
             this.xrRichText21 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText20 = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrRichText19 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText17 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText13 = new DevExpress.XtraReports.UI.XRRichText();
@@ -107,6 +105,8 @@
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.SoTKNo = new DevExpress.XtraReports.Parameters.Parameter();
             this.SoTKCo = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
@@ -146,7 +146,7 @@
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 0F;
+            this.BottomMargin.HeightF = 32.34256F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -155,14 +155,10 @@
             this.Detail.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrRichText16,
-            this.xrLabel2,
             this.xrTable1,
             this.xrTable2,
             this.xrCheckBox2,
             this.xrCheckBox1,
-            this.xrRichText21,
-            this.xrRichText20,
-            this.xrLine2,
             this.xrRichText19,
             this.xrRichText17,
             this.xrRichText13,
@@ -173,7 +169,7 @@
             this.xrPictureBox1,
             this.xrRichText1});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 1397F;
+            this.Detail.HeightF = 1107.122F;
             this.Detail.HierarchyPrintOptions.Indent = 50.8F;
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseBorderColor = false;
@@ -191,26 +187,6 @@
             this.xrRichText16.SizeF = new System.Drawing.SizeF(666.7498F, 150.6682F);
             this.xrRichText16.StylePriority.UseFont = false;
             this.xrRichText16.StylePriority.UsePadding = false;
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Angle = 90F;
-            this.xrLabel2.Dpi = 254F;
-            this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MaUNC]")});
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
-            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(163)))});
-            this.xrLabel2.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(1982.047F, 997.5455F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(38.94678F, 359.8723F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseForeColor = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "xrLabel2";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrTable1
             // 
@@ -967,11 +943,11 @@
             this.xrRichText21.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText21.Dpi = 254F;
             this.xrRichText21.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.xrRichText21.LocationFloat = new DevExpress.Utils.PointFloat(874.9122F, 1040.831F);
+            this.xrRichText21.LocationFloat = new DevExpress.Utils.PointFloat(846.5421F, 96.80137F);
             this.xrRichText21.Name = "xrRichText21";
             this.xrRichText21.Padding = new DevExpress.XtraPrinting.PaddingInfo(8, 8, 8, 8, 254F);
             this.xrRichText21.SerializableRtfString = resources.GetString("xrRichText21.SerializableRtfString");
-            this.xrRichText21.SizeF = new System.Drawing.SizeF(1100.667F, 103.0817F);
+            this.xrRichText21.SizeF = new System.Drawing.SizeF(1100.667F, 64.27615F);
             this.xrRichText21.StylePriority.UseBorders = false;
             this.xrRichText21.StylePriority.UseFont = false;
             this.xrRichText21.StylePriority.UsePadding = false;
@@ -981,22 +957,14 @@
             this.xrRichText20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText20.Dpi = 254F;
             this.xrRichText20.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.xrRichText20.LocationFloat = new DevExpress.Utils.PointFloat(77.31137F, 973.733F);
+            this.xrRichText20.LocationFloat = new DevExpress.Utils.PointFloat(87.38793F, 24.99998F);
             this.xrRichText20.Name = "xrRichText20";
             this.xrRichText20.Padding = new DevExpress.XtraPrinting.PaddingInfo(8, 8, 8, 8, 254F);
             this.xrRichText20.SerializableRtfString = resources.GetString("xrRichText20.SerializableRtfString");
-            this.xrRichText20.SizeF = new System.Drawing.SizeF(797.6008F, 103.0817F);
+            this.xrRichText20.SizeF = new System.Drawing.SizeF(797.6008F, 71.80139F);
             this.xrRichText20.StylePriority.UseBorders = false;
             this.xrRichText20.StylePriority.UseFont = false;
             this.xrRichText20.StylePriority.UsePadding = false;
-            // 
-            // xrLine2
-            // 
-            this.xrLine2.Dpi = 254F;
-            this.xrLine2.LineWidth = 2F;
-            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(61.44001F, 967.5948F);
-            this.xrLine2.Name = "xrLine2";
-            this.xrLine2.SizeF = new System.Drawing.SizeF(1915.315F, 6.138367F);
             // 
             // xrRichText19
             // 
@@ -1031,11 +999,11 @@
             this.xrRichText13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText13.Dpi = 254F;
             this.xrRichText13.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.xrRichText13.LocationFloat = new DevExpress.Utils.PointFloat(1440.159F, 613.8611F);
+            this.xrRichText13.LocationFloat = new DevExpress.Utils.PointFloat(1436.002F, 537.4259F);
             this.xrRichText13.Name = "xrRichText13";
             this.xrRichText13.Padding = new DevExpress.XtraPrinting.PaddingInfo(8, 8, 8, 8, 254F);
             this.xrRichText13.SerializableRtfString = resources.GetString("xrRichText13.SerializableRtfString");
-            this.xrRichText13.SizeF = new System.Drawing.SizeF(293.3508F, 323.215F);
+            this.xrRichText13.SizeF = new System.Drawing.SizeF(293.351F, 127.8701F);
             this.xrRichText13.StylePriority.UseBorders = false;
             this.xrRichText13.StylePriority.UseFont = false;
             this.xrRichText13.StylePriority.UsePadding = false;
@@ -1045,11 +1013,11 @@
             this.xrRichText12.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText12.Dpi = 254F;
             this.xrRichText12.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.xrRichText12.LocationFloat = new DevExpress.Utils.PointFloat(937.6431F, 613.8611F);
+            this.xrRichText12.LocationFloat = new DevExpress.Utils.PointFloat(940.183F, 537.4259F);
             this.xrRichText12.Name = "xrRichText12";
             this.xrRichText12.Padding = new DevExpress.XtraPrinting.PaddingInfo(8, 8, 8, 8, 254F);
             this.xrRichText12.SerializableRtfString = resources.GetString("xrRichText12.SerializableRtfString");
-            this.xrRichText12.SizeF = new System.Drawing.SizeF(330.2383F, 323.215F);
+            this.xrRichText12.SizeF = new System.Drawing.SizeF(330.2385F, 127.8702F);
             this.xrRichText12.StylePriority.UseBorders = false;
             this.xrRichText12.StylePriority.UseFont = false;
             this.xrRichText12.StylePriority.UsePadding = false;
@@ -1059,11 +1027,11 @@
             this.xrRichText10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText10.Dpi = 254F;
             this.xrRichText10.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.xrRichText10.LocationFloat = new DevExpress.Utils.PointFloat(940.1829F, 410.0454F);
+            this.xrRichText10.LocationFloat = new DevExpress.Utils.PointFloat(940.183F, 410.0455F);
             this.xrRichText10.Name = "xrRichText10";
             this.xrRichText10.Padding = new DevExpress.XtraPrinting.PaddingInfo(8, 8, 8, 8, 254F);
             this.xrRichText10.SerializableRtfString = resources.GetString("xrRichText10.SerializableRtfString");
-            this.xrRichText10.SizeF = new System.Drawing.SizeF(789.1703F, 182.2643F);
+            this.xrRichText10.SizeF = new System.Drawing.SizeF(789.1703F, 110.5328F);
             this.xrRichText10.StylePriority.UseBorders = false;
             this.xrRichText10.StylePriority.UsePadding = false;
             // 
@@ -1116,9 +1084,11 @@
             // 
             this.xrCrossBandBox1.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.xrCrossBandBox1.BorderColor = System.Drawing.Color.Black;
+            this.xrCrossBandBox1.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrCrossBandBox1.Dpi = 254F;
             this.xrCrossBandBox1.EndBand = this.Detail;
-            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(61.43637F, 1397F);
+            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(61.43637F, 1107.122F);
             this.xrCrossBandBox1.Name = "xrCrossBandBox1";
             this.xrCrossBandBox1.StartBand = this.Detail;
             this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(61.43637F, 45.97862F);
@@ -1134,12 +1104,34 @@
             this.SoTKCo.Description = "Tài khoản có";
             this.SoTKCo.Name = "SoTKCo";
             // 
+            // xrCrossBandBox2
+            // 
+            this.xrCrossBandBox2.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrCrossBandBox2.BorderColor = System.Drawing.Color.Black;
+            this.xrCrossBandBox2.Dpi = 254F;
+            this.xrCrossBandBox2.EndBand = this.ReportFooter;
+            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(61.44019F, 304.3541F);
+            this.xrCrossBandBox2.Name = "xrCrossBandBox2";
+            this.xrCrossBandBox2.StartBand = this.ReportFooter;
+            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(61.44019F, 0F);
+            this.xrCrossBandBox2.WidthF = 1920.606F;
+            // 
+            // ReportFooter
+            // 
+            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRichText21,
+            this.xrRichText20});
+            this.ReportFooter.Dpi = 254F;
+            this.ReportFooter.HeightF = 304.3542F;
+            this.ReportFooter.Name = "ReportFooter";
+            // 
             // XRp_UNCVietComBank
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,
             this.BottomMargin,
-            this.Detail});
+            this.Detail,
+            this.ReportFooter});
             this.BorderColor = System.Drawing.Color.Red;
             this.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
@@ -1147,12 +1139,13 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.objectDataSource1});
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
+            this.xrCrossBandBox2,
             this.xrCrossBandBox1});
             this.DataSource = this.objectDataSource1;
             this.Dpi = 254F;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(12.7F, 12.7F, 12.7F, 0F);
+            this.Margins = new DevExpress.Drawing.DXMargins(12.7F, 12.7F, 12.7F, 32.34256F);
             this.PageHeight = 1480;
             this.PageWidth = 2100;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A5;
@@ -1200,7 +1193,6 @@
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
         private DevExpress.XtraReports.UI.XRRichText xrRichText16;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
@@ -1259,7 +1251,6 @@
         private DevExpress.XtraReports.UI.XRCheckBox xrCheckBox1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText21;
         private DevExpress.XtraReports.UI.XRRichText xrRichText20;
-        private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.XRRichText xrRichText19;
         private DevExpress.XtraReports.UI.XRRichText xrRichText17;
         private DevExpress.XtraReports.UI.XRRichText xrRichText13;
@@ -1273,5 +1264,7 @@
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox1;
         private DevExpress.XtraReports.Parameters.Parameter SoTKNo;
         private DevExpress.XtraReports.Parameters.Parameter SoTKCo;
+        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
+        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
     }
 }
