@@ -55,6 +55,7 @@ namespace APIServerNFC.API_Admin
           
             return Content(json);
         }
+       
     }
 
     // Model

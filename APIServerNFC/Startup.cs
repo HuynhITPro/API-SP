@@ -45,6 +45,7 @@ namespace APIServerNFC
                     .AllowCredentials()
                     );
             });
+            services.AddScoped<FcmSender>();
             services.AddSingleton<ICommandHandler, CommandHandler>();
             services.AddSingleton<MqttService>();
             services.AddHostedService<MqttServiceBackground>();
@@ -81,7 +82,7 @@ namespace APIServerNFC
             });
             //services.AddControllers();
             //services.AddHttpClient();
-            services.AddScoped<FcmSender>();
+          
             FirebaseApp.Create(new AppOptions()
             {
                 Credential = GoogleCredential.FromFile("Controllers/firebase-service-account.json")

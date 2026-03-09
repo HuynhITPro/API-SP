@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="BouncyCastle" Version="1.8.9" />
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="DevExpress.Drawing" Version="24.2.3" />
     <PackageReference Include="DevExpress.Reporting.Core" Version="24.2.3" />
     <PackageReference Include="FirebaseAdmin" Version="3.3.0" />
@@ -38,6 +39,15 @@
 
   <ItemGroup>
     <Compile Update="Api_Report\XtraRp_BaoTri_ItemHeader_ConTrong.cs">
+      <SubType>XtraReport</SubType>
+    </Compile>
+    <Compile Update="Api_Report\XtraRp_GiaoNhanNoiBo_BangKe.cs">
+      <SubType>XtraReport</SubType>
+    </Compile>
+    <Compile Update="Api_Report\XtraRp_PhieuGiaoNhanNoiBo_TonKho.cs">
+      <SubType>XtraReport</SubType>
+    </Compile>
+    <Compile Update="Api_Report\XtraRp_PhieuXuatKho_KhongGiaIway.cs">
       <SubType>XtraReport</SubType>
     </Compile>
   </ItemGroup>

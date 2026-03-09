@@ -84,13 +84,13 @@
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 16.40416F;
+            this.TopMargin.HeightF = 19.2264F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 25.13542F;
+            this.BottomMargin.HeightF = 12.95772F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -105,7 +105,7 @@
             this.xrLabel1,
             this.xrTable1});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 1135.063F;
+            this.Detail.HeightF = 1099.609F;
             this.Detail.HierarchyPrintOptions.Indent = 50.8F;
             this.Detail.Name = "Detail";
             this.Detail.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
@@ -203,7 +203,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[ImageChiTiet]")});
             this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(574.8521F, 328.0833F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(1423.548F, 806.9794F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(1423.548F, 756.1795F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrLabel2
@@ -495,36 +495,45 @@
             // 
             this.xrTableCell2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell2.Dpi = 254F;
+            this.xrTableCell2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MauSo]")});
             this.xrTableCell2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell2.Multiline = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.StylePriority.UseBorders = false;
             this.xrTableCell2.StylePriority.UseFont = false;
             this.xrTableCell2.Text = "Mẫu số: 003A/BM/QĐNDSP";
+            this.xrTableCell2.TextFormatString = "Mẫu số: {0}";
             this.xrTableCell2.Weight = 0.77360017868298325D;
             // 
             // xrTableCell3
             // 
             this.xrTableCell3.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell3.Dpi = 254F;
+            this.xrTableCell3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LanSoatXet]")});
             this.xrTableCell3.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseBorders = false;
             this.xrTableCell3.StylePriority.UseFont = false;
             this.xrTableCell3.Text = "Lần soát xét: 02";
+            this.xrTableCell3.TextFormatString = "Lần soát xét: {0}";
             this.xrTableCell3.Weight = 0.55957886658962341D;
             // 
             // xrTableCell4
             // 
             this.xrTableCell4.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell4.Dpi = 254F;
+            this.xrTableCell4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NgayHieuLuc]")});
             this.xrTableCell4.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell4.Multiline = true;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.StylePriority.UseBorders = false;
             this.xrTableCell4.StylePriority.UseFont = false;
             this.xrTableCell4.Text = "Ngày hiệu lực: 04/11/2016";
+            this.xrTableCell4.TextFormatString = "Ngày hiệu lực: {0:dd/MM/yy}";
             this.xrTableCell4.Weight = 0.66682095472739333D;
             // 
             // SubBand1
@@ -535,7 +544,7 @@
             this.xrLabel4,
             this.xrLabel3});
             this.SubBand1.Dpi = 254F;
-            this.SubBand1.HeightF = 184.8145F;
+            this.SubBand1.HeightF = 159.8146F;
             this.SubBand1.Name = "SubBand1";
             // 
             // xrLabel5
@@ -544,7 +553,7 @@
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Serial]")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Times New Roman", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(1672.031F, 126.3944F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(1669.679F, 101.3946F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -560,7 +569,7 @@
             this.xrBarCode2.Dpi = 254F;
             this.xrBarCode2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Serial]")});
-            this.xrBarCode2.LocationFloat = new DevExpress.Utils.PointFloat(1626.796F, 24.99993F);
+            this.xrBarCode2.LocationFloat = new DevExpress.Utils.PointFloat(1626.796F, 0F);
             this.xrBarCode2.Module = 4.08F;
             this.xrBarCode2.Name = "xrBarCode2";
             this.xrBarCode2.Padding = new DevExpress.XtraPrinting.PaddingInfo(26, 26, 0, 0, 254F);
@@ -573,22 +582,24 @@
             this.xrLabel4.Dpi = 254F;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[GhiChu]")});
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(759.925F, 126.3944F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(818.4885F, 0F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(912.1061F, 58.42005F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(808.3077F, 58.42005F);
             this.xrLabel4.Text = "Ghi chú:";
             this.xrLabel4.TextFormatString = "Ghi chú: {0}";
             // 
             // xrLabel3
             // 
             this.xrLabel3.Dpi = 254F;
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(24.99993F, 0F);
+            this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DienGiaiForm]")});
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(24.99991F, 0F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(734.9249F, 184.8144F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(793.4886F, 53.11071F);
             this.xrLabel3.Text = "Thời gian cán: .......giờ......../......./......\r\nChờ khô keo:.........giờ......." +
     "./......./......\r\nChuyển công đoạn:......giờ......./....../.......\r\nNhúng thực t" +
     "ế: .......giờ......./......./......";
@@ -602,7 +613,7 @@
             this.Dpi = 254F;
             this.Font = new DevExpress.Drawing.DXFont("Times New Roman", 12F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(50.8F, 50.8F, 16.40416F, 25.13542F);
+            this.Margins = new DevExpress.Drawing.DXMargins(50.8F, 50.8F, 19.2264F, 12.95772F);
             this.PageHeight = 1480;
             this.PageWidth = 2100;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A5;

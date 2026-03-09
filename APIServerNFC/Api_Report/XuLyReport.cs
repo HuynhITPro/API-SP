@@ -46,13 +46,25 @@ namespace APIServerNFC.Api_Report
                     report = new XtraRp_PhieuXuatKho_KhongGia();
                     XtraRp_PhieuXuatKho_KhongGia(report, getDataFromSql, dtsource, stream);
                     break;
+                case "XtraRp_PhieuXuatKho_KhongGiaIway":
+                    report = new XtraRp_PhieuXuatKho_KhongGiaIway();
+                    XtraRp_PhieuXuatKho_KhongGiaIway(report, getDataFromSql, dtsource, stream);
+                    break;
                 case "XRp_UNC":
                     XRp_UNC(report, getDataFromSql, dtsource, stream);
                     break;
-                //case "Xtra_InTemMayMoc":
-                //    //report = new Xtra_InTemMayMoc();
-                //    XtraRp_InTemHangHoa(report, getDataFromSql, dtsource, stream);
-                //    break;
+                case "XtraRp_PhieuGiaoNhanNoiBo":
+                    //report = new Xtra_InTemMayMoc();
+                    XtraRp_PhieuGiaoNhanNoiBo(report, getDataFromSql, dtsource, stream);
+                    break;
+                case "XtraRp_GiaoNhanNoiBo_BangKe":
+                    //report = new Xtra_InTemMayMoc();
+                    XtraRp_GiaoNhanNoiBo_BangKe(report, getDataFromSql, dtsource, stream);
+                    break;
+                case "XtraRp_PhieuGiaoNhanNoiBo_TonKho":
+                    //report = new Xtra_InTemMayMoc();
+                    XtraRp_PhieuGiaoNhanNoiBo_TonKho(report, getDataFromSql, dtsource, stream);
+                    break;
                 case "Xtra_TheKhoHoaChatFIFO":
                     Xtra_TheKhoHoaChatTheoFIFO(report, getDataFromSql, dtsource, stream);
                     break;
@@ -64,6 +76,7 @@ namespace APIServerNFC.Api_Report
                     report = new XtraRp_PhieuNhanDang();
                     XtraRp_PhieuNhanDang(report, getDataFromSql, dtsource, stream);
                     break;
+              
                 default:
                    if(report!=null)
                     {
@@ -127,6 +140,7 @@ namespace APIServerNFC.Api_Report
             xtraRp_PhieuNhapKho.DataSource = dtsource;
             xtraRp_PhieuNhapKho.ExportToPdf(stream);
         }
+
         public void XtraRp_PhieuXuatKho_KhongGia(XtraReport report, GetDataFromSql classReport, DataTable dtsource, MemoryStream stream)
         {
             XtraRp_PhieuXuatKho_KhongGia xtraRp_PhieuNhapKho = (XtraRp_PhieuXuatKho_KhongGia)report;
@@ -163,6 +177,43 @@ namespace APIServerNFC.Api_Report
             xtraRp_PhieuNhapKho.DataSource = dtsource;
             xtraRp_PhieuNhapKho.ExportToPdf(stream);
         }
+        public void XtraRp_PhieuXuatKho_KhongGiaIway(XtraReport report, GetDataFromSql classReport, DataTable dtsource, MemoryStream stream)
+        {
+            XtraRp_PhieuXuatKho_KhongGiaIway xtraRp_PhieuNhapKho = (XtraRp_PhieuXuatKho_KhongGiaIway)report;
+
+
+            if (dtsource.Rows.Count > 0)
+            {
+                //CheckTrung mã hàng để in subtong
+                var query = dtsource.AsEnumerable().GroupBy(p => new { MaHang = p.Field<string>("MaHang"), TenHang = p.Field<string>("TenHang") })
+                   .Select(g => new
+                   {
+                       MaHang = g.Key.MaHang,
+                       TenHang = g.Key.TenHang,
+                       SLNhap = g.Sum(p => p.Field<decimal>("SLNhap")),
+                       Count = g.Count()
+
+                   }).OrderBy(p => p.MaHang).ToList();
+                var checkduplicate = query.Where(p => p.Count > 1).FirstOrDefault();
+                XRSubreport xrqtitem = xtraRp_PhieuNhapKho.FindControl("xrSubreport1", true) as XRSubreport;
+                if (checkduplicate != null)
+                {
+
+                    Xtra_PhieuXuatKho_Total xtraRp_DonDatHangItem = (Xtra_PhieuXuatKho_Total)xrqtitem.ReportSource;
+                    xtraRp_DonDatHangItem.DataSource = query;
+                }
+                else
+                    xrqtitem.Visible = false;
+                //xtraRp_DonDatHangItem.setGhiChu(dtmaster.Rows[0]["GhiChu"].ToString(), "");
+
+
+
+            }
+
+            xtraRp_PhieuNhapKho.DataSource = dtsource;
+            xtraRp_PhieuNhapKho.ExportToPdf(stream);
+        }
+        
         public void Xtra_TheKhoHoaChatTheoMaHang(XtraReport report, GetDataFromSql classReport, DataTable dtsource, MemoryStream stream)
         {
             string ghichu = "";
@@ -238,6 +289,64 @@ namespace APIServerNFC.Api_Report
         {
             string ghichu = "";
             XtraRp_BangKeTongHop xtra_TheKhoHoaChatTheoMaHang = (XtraRp_BangKeTongHop)report;
+            if (!string.IsNullOrEmpty(classReport.dtparameter))
+            {
+                DataTable dttmp = JsonConvert.DeserializeObject<DataTable>(classReport.dtparameter);
+
+                if (dttmp.Rows.Count > 0)
+                {
+                    ghichu += string.Format("{0}", dttmp.Rows[0]["GhiChu"].ToString());
+
+                    xtra_TheKhoHoaChatTheoMaHang.setGhiChu(ghichu);
+                }
+            }
+            xtra_TheKhoHoaChatTheoMaHang.DataSource = dtsource;
+            xtra_TheKhoHoaChatTheoMaHang.ExportToPdf(stream);
+
+        }
+        public void XtraRp_PhieuGiaoNhanNoiBo(XtraReport report, GetDataFromSql classReport, DataTable dtsource, MemoryStream stream)
+        {
+            string ghichu = "";
+            XtraRp_PhieuGiaoNhanNoiBo xtra_TheKhoHoaChatTheoMaHang = (XtraRp_PhieuGiaoNhanNoiBo)report;
+            if (!string.IsNullOrEmpty(classReport.dtparameter))
+            {
+                DataTable dttmp = JsonConvert.DeserializeObject<DataTable>(classReport.dtparameter);
+
+                if (dttmp.Rows.Count > 0)
+                {
+                    ghichu += string.Format("{0}", dttmp.Rows[0]["GhiChu"].ToString());
+
+                    xtra_TheKhoHoaChatTheoMaHang.setGhiChu(ghichu);
+                }
+            }
+            xtra_TheKhoHoaChatTheoMaHang.DataSource = dtsource;
+            xtra_TheKhoHoaChatTheoMaHang.ExportToPdf(stream);
+
+        }
+        public void XtraRp_GiaoNhanNoiBo_BangKe(XtraReport report, GetDataFromSql classReport, DataTable dtsource, MemoryStream stream)
+        {
+            string ghichu = "";
+            XtraRp_GiaoNhanNoiBo_BangKe xtra_TheKhoHoaChatTheoMaHang = (XtraRp_GiaoNhanNoiBo_BangKe)report;
+            if (!string.IsNullOrEmpty(classReport.dtparameter))
+            {
+                DataTable dttmp = JsonConvert.DeserializeObject<DataTable>(classReport.dtparameter);
+
+                if (dttmp.Rows.Count > 0)
+                {
+                    ghichu += string.Format("{0}", dttmp.Rows[0]["GhiChu"].ToString());
+
+                    xtra_TheKhoHoaChatTheoMaHang.setGhiChu(ghichu);
+                }
+            }
+            xtra_TheKhoHoaChatTheoMaHang.DataSource = dtsource;
+            xtra_TheKhoHoaChatTheoMaHang.ExportToPdf(stream);
+
+        }
+        
+       public void XtraRp_PhieuGiaoNhanNoiBo_TonKho(XtraReport report, GetDataFromSql classReport, DataTable dtsource, MemoryStream stream)
+        {
+            string ghichu = "";
+            XtraRp_PhieuGiaoNhanNoiBo_TonKho xtra_TheKhoHoaChatTheoMaHang = (XtraRp_PhieuGiaoNhanNoiBo_TonKho)report;
             if (!string.IsNullOrEmpty(classReport.dtparameter))
             {
                 DataTable dttmp = JsonConvert.DeserializeObject<DataTable>(classReport.dtparameter);

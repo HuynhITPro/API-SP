@@ -955,6 +955,18 @@ namespace APIServerNFC.API_Admin
             }
         }
 
+        [HttpPost]
+        [Route("ExportExcel")]
+        public async Task<IActionResult> ExportExcel([FromBody] ExcelExportDefine excelExportDefine)
+        {
+            ExportExcelXml exportExcelXml = new ExportExcelXml();
+            var content = exportExcelXml.ExportToExcel(excelExportDefine);
+            
+            return File(content,
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                excelExportDefine.FileName);
+        }
+
         private readonly IMemoryCache _cache;
         private readonly IHttpClientFactory _httpClientFactory;
 
@@ -972,37 +984,6 @@ namespace APIServerNFC.API_Admin
         }
 
 
-        //[Route("zk")]
-        //[HttpPost]
-        //public async Task<IActionResult> ReceiveAsync([FromForm] AttendanceModel data)
-        //{
-        //    await using (SqlConnection sqlConnection = prs.Connect())
-        //    {
-        //        sqlConnection.Open();
-        //        SqlCommand sqlCommand = new SqlCommand();
-        //        sqlCommand.Connection = sqlConnection;
-        //        try
-        //        {
-        //            string s = $"Log từ {data.deviceSN} - {data.userID} lúc {data.time}";
-        //            sqlCommand.CommandText = string.Format(@"INSERT INTO [test].[dbo].[dbtest]([Test])VALUES(N'{0}')",s);
-        //            sqlCommand.Connection=sqlConnection;
-        //            sqlCommand.ExecuteNonQuery();
-        //            sqlConnection.Close();
-        //            sqlCommand.Parameters.Clear();
-        //            sqlCommand.Dispose();
-
-
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            return new JsonResult("Lỗi: " + ex.Message); //string s = ex.Message;
-        //        }
-        //    }
-        //        //object ob = new 
-        //        Console.WriteLine($"Log từ {data.deviceSN} - {data.userID} lúc {data.time}");
-        //    // Lưu vào DB hoặc xử lý logic tại đây
-        //    return Ok("Received");
-        //}
         [HttpPost("zk")]
         public async Task<IActionResult> Receive()
         {
