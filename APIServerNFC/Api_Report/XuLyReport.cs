@@ -488,6 +488,32 @@ namespace APIServerNFC.Api_Report
                 {
                     xrqtitem.Visible = false;
                 }
+
+                XRSubreport xrqtitemcongdoan = xtraRp_PhieuNhapKho.FindControl("xrSubreport2", true) as XRSubreport;
+                //Tạo 1 Parameter MaChiTietInput để trong XtraRp_ChiTietItem để binding MaChiTiet vào
+                xrqtitemcongdoan.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("MaChiTietInput", null, "MaChiTiet"));
+
+                string jsoncongdoan = "";
+                var queryJsoncongdoan = dtsource.AsEnumerable().Where(p => p["JsonCongDoan"] != DBNull.Value).FirstOrDefault();
+                if (queryJson != null)
+                {
+                    jsoncongdoan = queryJson["JsonCongDoan"].ToString();
+                }
+                if (!string.IsNullOrEmpty(jsoncongdoan))
+                {
+
+                    DataTable dtitemcongdoan = JsonConvert.DeserializeObject<DataTable>(jsoncongdoan);
+
+                    XtraRp_CongDoanItem xtraRp_BaoTri_ItemHeader = (XtraRp_CongDoanItem)xrqtitemcongdoan.ReportSource;
+                    xtraRp_BaoTri_ItemHeader.FilterString = "[MaCT] = ?MaChiTietInput";//Binding vào subreport
+                    xtraRp_BaoTri_ItemHeader.DataSource = dtitemcongdoan;
+
+                }
+                else
+                {
+                    xrqtitemcongdoan.Visible = false;
+                }
+
                 var queryImg = dtsource.AsEnumerable().Where(p => p["ImageChiTiet"] != DBNull.Value).ToList();
 
                 foreach (var it in queryImg)

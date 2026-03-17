@@ -27,6 +27,8 @@ namespace APIServerNFC.API_Admin
 
 
             DateTime dateTime = DateTime.Now;
+            int hour = dateTime.Hour;
+             bool ho= hour>=7&&hour<=17;//Giờ hành chính
             int minute = dateTime.Minute;
             try
             {
@@ -62,7 +64,7 @@ namespace APIServerNFC.API_Admin
 
                     }
                 }
-                if(minute%30==0)//30 phút gửi tin nhắn nhắc nhở 1 lần
+                if(minute%30==0&& ho)//30 phút gửi tin nhắn nhắc nhở 1 lần
                 {
                     using (SqlConnection sqlConnection = prs.ConnectSP())
                     {

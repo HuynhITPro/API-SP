@@ -16,13 +16,12 @@ namespace APIServerNFC.Api_Report
            
         }
         string MaCT = "";
-        private void xrSubreport1_BeforePrint(object sender, CancelEventArgs e)
+        private void subbeforeprint(object sender, CancelEventArgs e)
         {
             XRSubreport sub = (XRSubreport)sender;
-
             // Lấy data source của subreport
             var dt = ((XtraReport)sub.ReportSource).DataSource as DataTable;
-            if(dt!=null)
+            if (dt != null)
             {
                 if (dt.Select(string.Format("MaCT='{0}'", MaCT)).FirstOrDefault() != null)
                 {
@@ -37,13 +36,22 @@ namespace APIServerNFC.Api_Report
             {
                 sub.Visible = false;
             }
-           
         }
+        private void xrSubreport1_BeforePrint(object sender, CancelEventArgs e)
+        {
+            subbeforeprint(sender, e);
 
+        }
+        private void xrSubreport2_BeforePrint(object sender, CancelEventArgs e)
+        {
+            subbeforeprint(sender, e);
+        }
         private void xrTableCell20_BeforePrint(object sender, CancelEventArgs e)
         {
             XRTableCell xRTableCell = (XRTableCell)sender;
            MaCT= xRTableCell.Text;
         }
+     
+      
     }
 }
