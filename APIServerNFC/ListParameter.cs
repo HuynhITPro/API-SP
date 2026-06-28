@@ -20,9 +20,12 @@ namespace APIServerNFC
         public string topic { get; set; }
         public string id { get; set; }
         public string reportname { get; set; }
+        public string jsondata { get; set; }
+        public string jsondataclassname { get; set; }
         public string dtparameter { get; set; }
         public string typequery { get; set; }
         public bool IsPDFDirect { get; set; } = false;
+        public bool IsDataSet { get; set; } = false;
     }
     public class ClassReport
     {

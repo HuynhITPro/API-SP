@@ -1,5 +1,6 @@
 ﻿using APIServerNFC.API_Admin;
 using APIServerNFC.Controllers;
+using APIServerNFC.Model;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
 using Microsoft.AspNetCore.Builder;
@@ -74,7 +75,13 @@ namespace APIServerNFC
 
             //services.AddSingleton<MqttService>();//Kết nối lâu dài
             services.AddSingleton<FtpService>();//Thêm vào để tải file từ FTP
-
+                                                // Đăng ký OllamaService
+            #region Phần này code cho AI, tạm thời chưa sử dụng khi nào build được máy chủ OK thì mở ra
+            //services.AddHttpClient<IOllamaService, OllamaService>();
+            //services.AddHttpClient<OllamaService>();
+            //services.AddScoped<DatabaseService>();
+            //services.AddScoped<TextToSqlService>();
+            #endregion
             services.AddSignalR(options =>
             {
                 options.ClientTimeoutInterval = TimeSpan.FromMinutes(1); // Khoảng thời gian client được giữ kết nối

@@ -368,6 +368,7 @@
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            this.xrTableCell229 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -378,13 +379,13 @@
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 19.28518F;
+            this.TopMargin.HeightF = 34.10186F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 64.28773F;
+            this.BottomMargin.HeightF = 33.61526F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -395,13 +396,13 @@
             this.xrTable3,
             this.xrTable2});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 4966.567F;
+            this.Detail.FillEmptySpace = true;
+            this.Detail.HeightF = 4860F;
             this.Detail.HierarchyPrintOptions.Indent = 50.8F;
             this.Detail.Name = "Detail";
             this.Detail.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1,
             this.SubBand2});
-          
             // 
             // xrTable1
             // 
@@ -539,7 +540,7 @@
             this.xrTableCell9});
             this.xrTableRow3.Dpi = 254F;
             this.xrTableRow3.Name = "xrTableRow3";
-            this.xrTableRow3.Weight = 0.555555642773048D;
+            this.xrTableRow3.Weight = 0.55118118886132D;
             // 
             // xrTableCell2
             // 
@@ -569,10 +570,10 @@
             // 
             this.Swift.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Swift.Dpi = 254F;
-            this.Swift.LocationFloat = new DevExpress.Utils.PointFloat(0.08496094F, 5.079948F);
+            this.Swift.LocationFloat = new DevExpress.Utils.PointFloat(0.08496094F, 5.079941F);
             this.Swift.Name = "Swift";
             this.Swift.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.Swift.SizeF = new System.Drawing.SizeF(213.7835F, 58.42005F);
+            this.Swift.SizeF = new System.Drawing.SizeF(213.7834F, 57.92007F);
             this.Swift.StylePriority.UseBorders = false;
             this.Swift.Text = "SWIFT ";
             // 
@@ -591,10 +592,10 @@
             // 
             this.Sec.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Sec.Dpi = 254F;
-            this.Sec.LocationFloat = new DevExpress.Utils.PointFloat(0.0001220703F, 5.079948F);
+            this.Sec.LocationFloat = new DevExpress.Utils.PointFloat(0.0001220703F, 5.079941F);
             this.Sec.Name = "Sec";
             this.Sec.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.Sec.SizeF = new System.Drawing.SizeF(364.5959F, 58.42005F);
+            this.Sec.SizeF = new System.Drawing.SizeF(364.5959F, 57.92007F);
             this.Sec.StylePriority.UseBorders = false;
             this.Sec.Text = "Séc (Bank draft)";
             // 
@@ -607,7 +608,7 @@
             this.xrTableRow6.Dpi = 254F;
             this.xrTableRow6.Name = "xrTableRow6";
             this.xrTableRow6.StylePriority.UseBorders = false;
-            this.xrTableRow6.Weight = 1.3917167672941451D;
+            this.xrTableRow6.Weight = 1.3960912212058731D;
             // 
             // xrTableCell15
             // 
@@ -630,7 +631,7 @@
             // 
             this.xrTable4.Dpi = 254F;
             this.xrTable4.Font = new DevExpress.Drawing.DXFont("Times New Roman", 11F);
-            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(55.00016F, 2414.073F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(55.00016F, 2406F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -665,7 +666,7 @@
             this.xrTableRow65,
             this.xrTableRow66,
             this.xrTableRow67});
-            this.xrTable4.SizeF = new System.Drawing.SizeF(1943.785F, 2552.494F);
+            this.xrTable4.SizeF = new System.Drawing.SizeF(1943.785F, 2454F);
             this.xrTable4.StylePriority.UseFont = false;
             // 
             // xrTableRow37
@@ -676,7 +677,7 @@
             this.xrTableCell110});
             this.xrTableRow37.Dpi = 254F;
             this.xrTableRow37.Name = "xrTableRow37";
-            this.xrTableRow37.Weight = 1D;
+            this.xrTableRow37.Weight = 0.9921259841567952D;
             // 
             // xrTableCell108
             // 
@@ -735,7 +736,7 @@
             this.xrTableCell124});
             this.xrTableRow38.Dpi = 254F;
             this.xrTableRow38.Name = "xrTableRow38";
-            this.xrTableRow38.Weight = 1D;
+            this.xrTableRow38.Weight = 0.99212598415679532D;
             // 
             // xrTableCell111
             // 
@@ -818,7 +819,7 @@
             this.xrTableCell116});
             this.xrTableRow39.Dpi = 254F;
             this.xrTableRow39.Name = "xrTableRow39";
-            this.xrTableRow39.Weight = 1D;
+            this.xrTableRow39.Weight = 0.99212598415679509D;
             // 
             // xrTableCell114
             // 
@@ -871,7 +872,7 @@
             this.xrTableCell119});
             this.xrTableRow40.Dpi = 254F;
             this.xrTableRow40.Name = "xrTableRow40";
-            this.xrTableRow40.Weight = 1D;
+            this.xrTableRow40.Weight = 0.9921259841567952D;
             // 
             // xrTableCell117
             // 
@@ -930,7 +931,7 @@
             this.xrTableCell122});
             this.xrTableRow41.Dpi = 254F;
             this.xrTableRow41.Name = "xrTableRow41";
-            this.xrTableRow41.Weight = 1D;
+            this.xrTableRow41.Weight = 0.99212598415679509D;
             // 
             // xrTableCell120
             // 
@@ -965,7 +966,7 @@
             // 
             // xrTableCell125
             // 
-            this.xrTableCell125.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTableCell125.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell125.Dpi = 254F;
             this.xrTableCell125.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Beneficiary].[Name]")});
@@ -1005,7 +1006,7 @@
             this.xrTableCell129});
             this.xrTableRow42.Dpi = 254F;
             this.xrTableRow42.Name = "xrTableRow42";
-            this.xrTableRow42.Weight = 1D;
+            this.xrTableRow42.Weight = 0.9921259841567952D;
             // 
             // xrTableCell126
             // 
@@ -1048,8 +1049,7 @@
             // 
             // xrTableCell129
             // 
-            this.xrTableCell129.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell129.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTableCell129.Dpi = 254F;
             this.xrTableCell129.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Beneficiary.AccountNumber]")});
@@ -1061,7 +1061,6 @@
             this.xrTableCell129.StylePriority.UseFont = false;
             this.xrTableCell129.StylePriority.UsePadding = false;
             this.xrTableCell129.StylePriority.UseTextAlignment = false;
-            this.xrTableCell129.Text = "501511371152";
             this.xrTableCell129.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrTableCell129.Weight = 1.1752829489612544D;
             // 
@@ -1075,7 +1074,7 @@
             this.xrTableCell234});
             this.xrTableRow43.Dpi = 254F;
             this.xrTableRow43.Name = "xrTableRow43";
-            this.xrTableRow43.Weight = 1D;
+            this.xrTableRow43.Weight = 0.99212598415679532D;
             // 
             // xrTableCell130
             // 
@@ -1109,7 +1108,7 @@
             // 
             // xrTableCell132
             // 
-            this.xrTableCell132.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTableCell132.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell132.Dpi = 254F;
             this.xrTableCell132.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Beneficiary.Address]")});
@@ -1162,7 +1161,7 @@
             this.xrTableCell137});
             this.xrTableRow44.Dpi = 254F;
             this.xrTableRow44.Name = "xrTableRow44";
-            this.xrTableRow44.Weight = 1D;
+            this.xrTableRow44.Weight = 0.99212598415679509D;
             // 
             // xrTableCell134
             // 
@@ -1216,14 +1215,15 @@
             // 
             this.xrTableRow45.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell138,
-            this.xrTableCell139});
+            this.xrTableCell139,
+            this.xrTableCell229});
             this.xrTableRow45.Dpi = 254F;
             this.xrTableRow45.Name = "xrTableRow45";
-            this.xrTableRow45.Weight = 1D;
+            this.xrTableRow45.Weight = 0.9921259841567952D;
             // 
             // xrTableCell138
             // 
-            this.xrTableCell138.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTableCell138.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrTableCell138.Dpi = 254F;
             this.xrTableCell138.Font = new DevExpress.Drawing.DXFont("Times New Roman", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell138.Multiline = true;
@@ -1238,8 +1238,7 @@
             // 
             // xrTableCell139
             // 
-            this.xrTableCell139.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell139.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrTableCell139.Dpi = 254F;
             this.xrTableCell139.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PaymentDetails]")});
@@ -1251,7 +1250,7 @@
             this.xrTableCell139.StylePriority.UseFont = false;
             this.xrTableCell139.StylePriority.UsePadding = false;
             this.xrTableCell139.Text = "Thanh toán chi phí test theo INV 2509-153 (25/09/2025)";
-            this.xrTableCell139.Weight = 2.8730485853716208D;
+            this.xrTableCell139.Weight = 2.6482012255425191D;
             // 
             // xrTableRow46
             // 
@@ -1261,7 +1260,7 @@
             this.xrTableCell145});
             this.xrTableRow46.Dpi = 254F;
             this.xrTableRow46.Name = "xrTableRow46";
-            this.xrTableRow46.Weight = 1D;
+            this.xrTableRow46.Weight = 0.99212598415679509D;
             // 
             // xrTableCell142
             // 
@@ -1319,7 +1318,7 @@
             this.xrTableCell141});
             this.xrTableRow47.Dpi = 254F;
             this.xrTableRow47.Name = "xrTableRow47";
-            this.xrTableRow47.Weight = 1D;
+            this.xrTableRow47.Weight = 0.9921259841567952D;
             // 
             // xrTableCell136
             // 
@@ -1377,7 +1376,7 @@
             this.xrTableCell149});
             this.xrTableRow48.Dpi = 254F;
             this.xrTableRow48.Name = "xrTableRow48";
-            this.xrTableRow48.Weight = 1D;
+            this.xrTableRow48.Weight = 0.99212598415679532D;
             // 
             // xrTableCell144
             // 
@@ -1490,7 +1489,7 @@
             this.xrTableCell154});
             this.xrTableRow49.Dpi = 254F;
             this.xrTableRow49.Name = "xrTableRow49";
-            this.xrTableRow49.Weight = 1D;
+            this.xrTableRow49.Weight = 0.99212598415679509D;
             // 
             // xrTableCell150
             // 
@@ -1599,7 +1598,7 @@
             this.xrTableCell164});
             this.xrTableRow51.Dpi = 254F;
             this.xrTableRow51.Name = "xrTableRow51";
-            this.xrTableRow51.Weight = 1D;
+            this.xrTableRow51.Weight = 0.9921259841567952D;
             // 
             // xrTableCell160
             // 
@@ -1689,7 +1688,7 @@
             this.xrTableCell157});
             this.xrTableRow50.Dpi = 254F;
             this.xrTableRow50.Name = "xrTableRow50";
-            this.xrTableRow50.Weight = 0.99999999999999989D;
+            this.xrTableRow50.Weight = 0.99212598415679509D;
             // 
             // xrTableCell155
             // 
@@ -1781,7 +1780,7 @@
             this.xrTableCell169});
             this.xrTableRow52.Dpi = 254F;
             this.xrTableRow52.Name = "xrTableRow52";
-            this.xrTableRow52.Weight = 0.99999999999999989D;
+            this.xrTableRow52.Weight = 0.992125984156795D;
             // 
             // xrTableCell165
             // 
@@ -1833,7 +1832,7 @@
             this.xrTableCell170});
             this.xrTableRow53.Dpi = 254F;
             this.xrTableRow53.Name = "xrTableRow53";
-            this.xrTableRow53.Weight = 1D;
+            this.xrTableRow53.Weight = 0.99212598415679532D;
             // 
             // xrTableCell167
             // 
@@ -1885,7 +1884,7 @@
             this.xrTableCell173});
             this.xrTableRow54.Dpi = 254F;
             this.xrTableRow54.Name = "xrTableRow54";
-            this.xrTableRow54.Weight = 1D;
+            this.xrTableRow54.Weight = 0.9921259841567952D;
             // 
             // xrTableCell171
             // 
@@ -1939,7 +1938,7 @@
             this.xrTableCell176});
             this.xrTableRow55.Dpi = 254F;
             this.xrTableRow55.Name = "xrTableRow55";
-            this.xrTableRow55.Weight = 1D;
+            this.xrTableRow55.Weight = 0.99212598415679532D;
             // 
             // xrTableCell174
             // 
@@ -2048,7 +2047,7 @@
             this.xrTableCell183});
             this.xrTableRow56.Dpi = 254F;
             this.xrTableRow56.Name = "xrTableRow56";
-            this.xrTableRow56.Weight = 1D;
+            this.xrTableRow56.Weight = 0.99212598415679509D;
             // 
             // xrTableCell179
             // 
@@ -2158,7 +2157,7 @@
             this.xrTableCell188});
             this.xrTableRow57.Dpi = 254F;
             this.xrTableRow57.Name = "xrTableRow57";
-            this.xrTableRow57.Weight = 1D;
+            this.xrTableRow57.Weight = 0.9921259841567952D;
             // 
             // xrTableCell184
             // 
@@ -2271,7 +2270,7 @@
             this.xrTableCell193});
             this.xrTableRow58.Dpi = 254F;
             this.xrTableRow58.Name = "xrTableRow58";
-            this.xrTableRow58.Weight = 1D;
+            this.xrTableRow58.Weight = 0.99212598415679509D;
             // 
             // xrTableCell189
             // 
@@ -2382,7 +2381,7 @@
             this.xrTableCell198});
             this.xrTableRow59.Dpi = 254F;
             this.xrTableRow59.Name = "xrTableRow59";
-            this.xrTableRow59.Weight = 1D;
+            this.xrTableRow59.Weight = 0.9921259841567952D;
             // 
             // xrTableCell194
             // 
@@ -2492,7 +2491,7 @@
             this.xrTableCell203});
             this.xrTableRow60.Dpi = 254F;
             this.xrTableRow60.Name = "xrTableRow60";
-            this.xrTableRow60.Weight = 1D;
+            this.xrTableRow60.Weight = 0.9921259841567952D;
             // 
             // xrTableCell199
             // 
@@ -2603,7 +2602,7 @@
             this.xrTableCell208});
             this.xrTableRow61.Dpi = 254F;
             this.xrTableRow61.Name = "xrTableRow61";
-            this.xrTableRow61.Weight = 1D;
+            this.xrTableRow61.Weight = 0.99212598415679509D;
             // 
             // xrTableCell204
             // 
@@ -2693,7 +2692,7 @@
             this.xrTableCell213});
             this.xrTableRow62.Dpi = 254F;
             this.xrTableRow62.Name = "xrTableRow62";
-            this.xrTableRow62.Weight = 1D;
+            this.xrTableRow62.Weight = 0.9921259841567952D;
             // 
             // xrTableCell209
             // 
@@ -2773,7 +2772,7 @@
             this.xrTableCell216});
             this.xrTableRow63.Dpi = 254F;
             this.xrTableRow63.Name = "xrTableRow63";
-            this.xrTableRow63.Weight = 1D;
+            this.xrTableRow63.Weight = 0.99212598415679532D;
             // 
             // xrTableCell211
             // 
@@ -2825,7 +2824,7 @@
             this.xrTableCell218});
             this.xrTableRow64.Dpi = 254F;
             this.xrTableRow64.Name = "xrTableRow64";
-            this.xrTableRow64.Weight = 2.722225976444868D;
+            this.xrTableRow64.Weight = 0.992126059725428D;
             // 
             // xrTableCell215
             // 
@@ -2875,7 +2874,7 @@
             this.xrTableCell221});
             this.xrTableRow65.Dpi = 254F;
             this.xrTableRow65.Name = "xrTableRow65";
-            this.xrTableRow65.Weight = 5.437476529372181D;
+            this.xrTableRow65.Weight = 5.8267714963223032D;
             // 
             // xrTableCell219
             // 
@@ -2913,7 +2912,8 @@
             // xrTableCell221
             // 
             this.xrTableCell221.AllowMarkupText = true;
-            this.xrTableCell221.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell221.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrTableCell221.Dpi = 254F;
             this.xrTableCell221.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrTableCell221.Multiline = true;
@@ -2936,7 +2936,7 @@
             this.xrTableCell224});
             this.xrTableRow66.Dpi = 254F;
             this.xrTableRow66.Name = "xrTableRow66";
-            this.xrTableRow66.Weight = 1.0555793535542515D;
+            this.xrTableRow66.Weight = 0.944881883781518D;
             // 
             // xrTableCell222
             // 
@@ -2989,7 +2989,7 @@
             this.xrTableCell227});
             this.xrTableRow67.Dpi = 254F;
             this.xrTableRow67.Name = "xrTableRow67";
-            this.xrTableRow67.Weight = 3.981472901831828D;
+            this.xrTableRow67.Weight = 4.0944887463865207D;
             // 
             // xrTableCell225
             // 
@@ -3078,7 +3078,7 @@
             this.xrTableRow34,
             this.xrTableRow35,
             this.xrTableRow36});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(1943.785F, 1143.001F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(1943.785F, 1134F);
             this.xrTable3.StylePriority.UseBorders = false;
             this.xrTable3.StylePriority.UseFont = false;
             this.xrTable3.StylePriority.UsePadding = false;
@@ -3092,7 +3092,7 @@
             this.xrTableCell42});
             this.xrTableRow19.Dpi = 254F;
             this.xrTableRow19.Name = "xrTableRow19";
-            this.xrTableRow19.Weight = 1D;
+            this.xrTableRow19.Weight = 0.99212532873565773D;
             // 
             // xrTableCell30
             // 
@@ -3134,7 +3134,7 @@
             this.xrTableCell74});
             this.xrTableRow21.Dpi = 254F;
             this.xrTableRow21.Name = "xrTableRow21";
-            this.xrTableRow21.Weight = 1D;
+            this.xrTableRow21.Weight = 0.99212532873565773D;
             // 
             // xrTableCell47
             // 
@@ -3168,7 +3168,7 @@
             // xrTableCell73
             // 
             this.xrTableCell73.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrTableCell73.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTableCell73.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell73.Dpi = 254F;
             this.xrTableCell73.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Amount.AmountInFigures]")});
@@ -3187,7 +3187,7 @@
             // xrTableCell44
             // 
             this.xrTableCell44.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrTableCell44.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTableCell44.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell44.Dpi = 254F;
             this.xrTableCell44.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Amount.Currency]")});
@@ -3229,7 +3229,7 @@
             this.xrTableCell45});
             this.xrTableRow22.Dpi = 254F;
             this.xrTableRow22.Name = "xrTableRow22";
-            this.xrTableRow22.Weight = 1.0000000273645386D;
+            this.xrTableRow22.Weight = 0.99212529602626409D;
             // 
             // xrTableCell49
             // 
@@ -3285,7 +3285,7 @@
             this.xrTableCell51});
             this.xrTableRow23.Dpi = 254F;
             this.xrTableRow23.Name = "xrTableRow23";
-            this.xrTableRow23.Weight = 0.99999999999999978D;
+            this.xrTableRow23.Weight = 0.99212526866172523D;
             // 
             // xrTableCell53
             // 
@@ -3344,7 +3344,7 @@
             this.xrTableCell52});
             this.xrTableRow24.Dpi = 254F;
             this.xrTableRow24.Name = "xrTableRow24";
-            this.xrTableRow24.Weight = 1.0000002316248264D;
+            this.xrTableRow24.Weight = 0.99212525999082279D;
             // 
             // xrTableCell55
             // 
@@ -3441,7 +3441,7 @@
             this.xrTableCell62});
             this.xrTableRow20.Dpi = 254F;
             this.xrTableRow20.Name = "xrTableRow20";
-            this.xrTableRow20.Weight = 1.0000002316248264D;
+            this.xrTableRow20.Weight = 0.99212525999082279D;
             // 
             // xrTableCell58
             // 
@@ -3535,7 +3535,7 @@
             this.xrTableCell67});
             this.xrTableRow25.Dpi = 254F;
             this.xrTableRow25.Name = "xrTableRow25";
-            this.xrTableRow25.Weight = 1.0000002316248264D;
+            this.xrTableRow25.Weight = 0.99212525999082279D;
             // 
             // xrTableCell63
             // 
@@ -3628,7 +3628,7 @@
             this.xrTableCell72});
             this.xrTableRow26.Dpi = 254F;
             this.xrTableRow26.Name = "xrTableRow26";
-            this.xrTableRow26.Weight = 1.0000002316248264D;
+            this.xrTableRow26.Weight = 0.99212525999082279D;
             // 
             // xrTableCell68
             // 
@@ -3703,7 +3703,7 @@
             this.xrTableCell77});
             this.xrTableRow27.Dpi = 254F;
             this.xrTableRow27.Name = "xrTableRow27";
-            this.xrTableRow27.Weight = 1.0000002316248264D;
+            this.xrTableRow27.Weight = 0.99212525999082279D;
             // 
             // xrTableCell71
             // 
@@ -3753,7 +3753,7 @@
             this.xrTableCell81});
             this.xrTableRow28.Dpi = 254F;
             this.xrTableRow28.Name = "xrTableRow28";
-            this.xrTableRow28.Weight = 1.0000002316248264D;
+            this.xrTableRow28.Weight = 0.99212525999082279D;
             // 
             // xrTableCell78
             // 
@@ -3799,7 +3799,7 @@
             this.xrTableCell82});
             this.xrTableRow29.Dpi = 254F;
             this.xrTableRow29.Name = "xrTableRow29";
-            this.xrTableRow29.Weight = 1.0000002316248264D;
+            this.xrTableRow29.Weight = 0.99212525999082279D;
             // 
             // xrTableCell76
             // 
@@ -3849,7 +3849,7 @@
             this.xrTableCell85});
             this.xrTableRow30.Dpi = 254F;
             this.xrTableRow30.Name = "xrTableRow30";
-            this.xrTableRow30.Weight = 1.0000002316248264D;
+            this.xrTableRow30.Weight = 0.99212525999082279D;
             // 
             // xrTableCell83
             // 
@@ -3901,7 +3901,7 @@
             this.xrTableCell88});
             this.xrTableRow31.Dpi = 254F;
             this.xrTableRow31.Name = "xrTableRow31";
-            this.xrTableRow31.Weight = 1.0000002316248264D;
+            this.xrTableRow31.Weight = 0.99212525999082279D;
             // 
             // xrTableCell86
             // 
@@ -3955,7 +3955,7 @@
             this.xrTableCell91});
             this.xrTableRow32.Dpi = 254F;
             this.xrTableRow32.Name = "xrTableRow32";
-            this.xrTableRow32.Weight = 1.0000002316248264D;
+            this.xrTableRow32.Weight = 0.99212525999082279D;
             // 
             // xrTableCell89
             // 
@@ -4047,7 +4047,7 @@
             this.xrTableCell94});
             this.xrTableRow33.Dpi = 254F;
             this.xrTableRow33.Name = "xrTableRow33";
-            this.xrTableRow33.Weight = 1.0000002316248264D;
+            this.xrTableRow33.Weight = 0.99212525999082268D;
             // 
             // xrTableCell92
             // 
@@ -4137,7 +4137,7 @@
             this.xrTableCell97});
             this.xrTableRow34.Dpi = 254F;
             this.xrTableRow34.Name = "xrTableRow34";
-            this.xrTableRow34.Weight = 1.0000002316248264D;
+            this.xrTableRow34.Weight = 0.99212525999082268D;
             // 
             // xrTableCell95
             // 
@@ -4193,7 +4193,7 @@
             this.xrTableCell104});
             this.xrTableRow35.Dpi = 254F;
             this.xrTableRow35.Name = "xrTableRow35";
-            this.xrTableRow35.Weight = 1.0000002316248264D;
+            this.xrTableRow35.Weight = 0.99212525999082268D;
             // 
             // xrTableCell102
             // 
@@ -4253,7 +4253,7 @@
             this.xrTableCell107});
             this.xrTableRow36.Dpi = 254F;
             this.xrTableRow36.Name = "xrTableRow36";
-            this.xrTableRow36.Weight = 1.0000002316248264D;
+            this.xrTableRow36.Weight = 0.99212610102587462D;
             // 
             // xrTableCell105
             // 
@@ -4323,7 +4323,7 @@
             this.xrTableRow17,
             this.xrTableRow16,
             this.xrTableRow18});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(1943.785F, 817.4449F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(1943.785F, 814.4449F);
             this.xrTable2.StylePriority.UseBorders = false;
             this.xrTable2.StylePriority.UseFont = false;
             this.xrTable2.StylePriority.UsePadding = false;
@@ -4338,7 +4338,7 @@
             this.xrTableCell12});
             this.xrTableRow5.Dpi = 254F;
             this.xrTableRow5.Name = "xrTableRow5";
-            this.xrTableRow5.Weight = 1D;
+            this.xrTableRow5.Weight = 0.99212598423152676D;
             // 
             // xrTableCell6
             // 
@@ -4388,7 +4388,7 @@
             this.xrTableCell16});
             this.xrTableRow7.Dpi = 254F;
             this.xrTableRow7.Name = "xrTableRow7";
-            this.xrTableRow7.Weight = 1D;
+            this.xrTableRow7.Weight = 0.99212598423152665D;
             // 
             // xrTableCell13
             // 
@@ -4424,7 +4424,7 @@
             this.xrTableCell19});
             this.xrTableRow8.Dpi = 254F;
             this.xrTableRow8.Name = "xrTableRow8";
-            this.xrTableRow8.Weight = 1D;
+            this.xrTableRow8.Weight = 0.99212598423152676D;
             // 
             // xrTableCell10
             // 
@@ -4460,7 +4460,7 @@
             this.xrTableCell25});
             this.xrTableRow9.Dpi = 254F;
             this.xrTableRow9.Name = "xrTableRow9";
-            this.xrTableRow9.Weight = 0.873147799032895D;
+            this.xrTableRow9.Weight = 0.99212598431962873D;
             // 
             // xrTableCell22
             // 
@@ -4524,7 +4524,7 @@
             this.xrTableCell27});
             this.xrTableRow10.Dpi = 254F;
             this.xrTableRow10.Name = "xrTableRow10";
-            this.xrTableRow10.Weight = 0.99999999999999944D;
+            this.xrTableRow10.Weight = 0.9921259842315262D;
             // 
             // xrTableCell26
             // 
@@ -4558,7 +4558,7 @@
             this.xrTableCell32});
             this.xrTableRow12.Dpi = 254F;
             this.xrTableRow12.Name = "xrTableRow12";
-            this.xrTableRow12.Weight = 1.0000001201479454D;
+            this.xrTableRow12.Weight = 0.99212598423152643D;
             // 
             // xrTableCell31
             // 
@@ -4592,7 +4592,7 @@
             this.xrTableCell18});
             this.xrTableRow11.Dpi = 254F;
             this.xrTableRow11.Name = "xrTableRow11";
-            this.xrTableRow11.Weight = 0.99999993512010987D;
+            this.xrTableRow11.Weight = 0.920391948823688D;
             // 
             // xrTableCell17
             // 
@@ -4628,7 +4628,7 @@
             this.xrTableCell28});
             this.xrTableRow13.Dpi = 254F;
             this.xrTableRow13.Name = "xrTableRow13";
-            this.xrTableRow13.Weight = 0.99999993512010965D;
+            this.xrTableRow13.Weight = 0.99212597942560921D;
             // 
             // xrTableCell21
             // 
@@ -4665,7 +4665,7 @@
             this.xrTableCell39});
             this.xrTableRow15.Dpi = 254F;
             this.xrTableRow15.Name = "xrTableRow15";
-            this.xrTableRow15.Weight = 1.0000000492884973D;
+            this.xrTableRow15.Weight = 0.99212597344605125D;
             // 
             // xrTableCell38
             // 
@@ -4701,7 +4701,7 @@
             this.xrTableCell35});
             this.xrTableRow14.Dpi = 254F;
             this.xrTableRow14.Name = "xrTableRow14";
-            this.xrTableRow14.Weight = 1.0000000071512614D;
+            this.xrTableRow14.Weight = 0.99212599138278812D;
             // 
             // xrTableCell34
             // 
@@ -4740,7 +4740,7 @@
             this.xrTableCell43});
             this.xrTableRow17.Dpi = 254F;
             this.xrTableRow17.Name = "xrTableRow17";
-            this.xrTableRow17.Weight = 0.99999996577859407D;
+            this.xrTableRow17.Weight = 0.99212595001012072D;
             // 
             // xrTableCell40
             // 
@@ -4794,7 +4794,7 @@
             this.xrTableCell33});
             this.xrTableRow16.Dpi = 254F;
             this.xrTableRow16.Name = "xrTableRow16";
-            this.xrTableRow16.Weight = 1.0000000960999298D;
+            this.xrTableRow16.Weight = 0.99212596018351085D;
             // 
             // xrTableCell20
             // 
@@ -4846,7 +4846,7 @@
             this.xrTableCell37});
             this.xrTableRow18.Dpi = 254F;
             this.xrTableRow18.Name = "xrTableRow18";
-            this.xrTableRow18.Weight = 0.99999992495476642D;
+            this.xrTableRow18.Weight = 0.99212602933423888D;
             // 
             // xrTableCell36
             // 
@@ -4944,6 +4944,19 @@
             this.objectDataSource1.DataSourceType = null;
             this.objectDataSource1.Name = "objectDataSource1";
             // 
+            // xrTableCell229
+            // 
+            this.xrTableCell229.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell229.Dpi = 254F;
+            this.xrTableCell229.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell229.Multiline = true;
+            this.xrTableCell229.Name = "xrTableCell229";
+            this.xrTableCell229.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 5, 0, 254F);
+            this.xrTableCell229.StylePriority.UseBorders = false;
+            this.xrTableCell229.StylePriority.UseFont = false;
+            this.xrTableCell229.StylePriority.UsePadding = false;
+            this.xrTableCell229.Weight = 0.22484735982910176D;
+            // 
             // XtraRp_UNCNgoaiTe
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -4954,7 +4967,7 @@
             this.objectDataSource1});
             this.Dpi = 254F;
             this.Font = new DevExpress.Drawing.DXFont("Times New Roman", 12F);
-            this.Margins = new DevExpress.Drawing.DXMargins(13F, 30F, 19.28518F, 64.28773F);
+            this.Margins = new DevExpress.Drawing.DXMargins(13F, 30F, 34.10186F, 33.61526F);
             this.PageHeight = 2970;
             this.PageWidth = 2100;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
@@ -5311,5 +5324,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell229;
     }
 }

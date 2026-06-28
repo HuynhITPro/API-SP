@@ -102,7 +102,7 @@
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 37.25209F;
+            this.TopMargin.HeightF = 60.53542F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -936,7 +936,7 @@
             this.Dpi = 254F;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(42F, 36F, 37.25209F, 0F);
+            this.Margins = new DevExpress.Drawing.DXMargins(42F, 36F, 60.53542F, 0F);
             this.PageHeight = 2100;
             this.PageWidth = 2970;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;

@@ -27,6 +27,26 @@ namespace APIServerNFC.Api_Report
             }
         }
 
-      
+        private void xrLabel5_BeforePrint(object sender, CancelEventArgs e)
+        {
+           
+        }
+
+        private void xrLabel6_BeforePrint(object sender, CancelEventArgs e)
+        {
+            var cell = sender as XRLabel;
+            //Console.WriteLine(cell.Text);
+            if (cell != null)
+            {
+                if (string.IsNullOrEmpty(cell.Text))
+                {
+                    SubBand2.Visible = false;
+                }
+            }
+            else
+            {
+                SubBand2.Visible = false;
+            }
+        }
     }
 }

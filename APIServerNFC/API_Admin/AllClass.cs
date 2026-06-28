@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-namespace APIServerNFC.API_Admin
+namespace APIServerNFC
 {
     public class AllClass
     {
@@ -23,5 +24,20 @@ namespace APIServerNFC.API_Admin
         public string HeaderName { get; set; }
         public string HeaderCaption { get; set; }
         //public int RowSpan { get; set; }
+    }
+    public class JsonFooter
+    {
+        public string TenBoPhan { get; set; }
+        public string HoVaTen { get; set; }
+        //public int RowSpan { get; set; }
+    }
+    public class JsonHeader
+    {
+        public string MaNCC { get; set; }
+        public string TenNCC { get; set; }
+        public string DiaChi { get; set; }
+        public string? MauSo { get; set; }
+        public string? LanSoatXet { get; set; }
+        public DateTime? NgayHieuLuc { get; set; }
     }
 }

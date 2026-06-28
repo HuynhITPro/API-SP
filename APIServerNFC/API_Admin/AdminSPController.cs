@@ -412,6 +412,77 @@ namespace APIServerNFC.API_Admin
             }
         }
 
+        [HttpPost]
+        [Route("ProcedureWithExceptionEncryptKyDuyet")]
+        public async Task<IActionResult> ProcedureWithExceptionEncryptKyDuyet([FromBody] GetDataFromSql lstParameter)
+        {
+            string sql = prs.Decrypt(lstParameter.sql);
+            //string sql = lstParameter.sql;
+            // List<SqlParameter> lst = listParameter.lstparameter;
+            string json = lstParameter.json;
+            string jsonoutput = "";
+            await using (SqlConnection sqlConnection = prs.ConnectSP())
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                try
+                {
+                    List<ParameterDefine> lstpara = JsonConvert.DeserializeObject<List<ParameterDefine>>(json);
+
+                    foreach (var it in lstpara)
+                    {
+                        if (it.ParameterValue != null)
+                        {
+                            if (it.Type == "DataTable")
+                            {
+
+                                DataTable dttmp = JsonConvert.DeserializeObject<DataTable>(it.ParameterValue.ToString());
+                                sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, dttmp));
+                                //dttmp.Clear();
+
+                            }
+                            else
+                            {
+                                sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, it.ParameterValue));
+                            }
+                        }
+                        else
+                            sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, DBNull.Value));
+
+                        //sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, it.ParameterValue));
+                    }
+                    sqlCommand.CommandText = sql;
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = prs.dt_sqlcmd(sqlCommand, sqlConnection);
+                    sqlConnection.Close();
+                    sqlCommand.Parameters.Clear();
+                    sqlCommand.Dispose();
+                    jsonoutput = JsonConvert.SerializeObject(dt);
+
+                    if (lstParameter.topic != null && lstParameter.id != null)//Có gửi message để in
+                    {
+                        _ = SendMsgKyDuyetAsync(lstParameter, dt);
+
+                    }
+
+                    dt.Dispose();
+
+                }
+                catch (Exception ex)
+                {
+                    DataTable dtex = new DataTable();
+                    dtex.Columns.Add("ketquaexception", typeof(string));
+                    DataRow dataRow = dtex.NewRow();
+                    dataRow["ketquaexception"] = ex.Message;
+                    dtex.Rows.Add(dataRow);
+                    jsonoutput = JsonConvert.SerializeObject(dtex);
+                }
+                //object ob = new JsonResult(lstsp);
+                return Content(jsonoutput);
+
+            }
+        }
 
         [HttpPost]
         [Route("ExcuteProcedure")]
@@ -759,13 +830,23 @@ namespace APIServerNFC.API_Admin
                                 sqlCommand.Parameters.Add(new SqlParameter(p.ParameterName, value));
                             }
                         }
-
+                        XuLyReport xuLyReport = new XuLyReport();
+                        DataTable dt=new DataTable();
                         // ---------- Lấy dữ liệu ----------
-                        DataTable dt = prs.dt_sqlcmd(sqlCommand, sqlConnection);
+                        if (input.IsDataSet)
+                        {
+                            DataSet ds = prs.dts_sqlcmd(sqlCommand, sqlConnection);
+                            xuLyReport.GetReport(input, ds, pdfStream);
+                        }
+                        else
+                        {
+                            dt = prs.dt_sqlcmd(sqlCommand, sqlConnection);
+                            xuLyReport.GetReport(input, dt, pdfStream);
+                        }
+                           
 
                         // ---------- Xuất PDF ----------
-                        XuLyReport xuLyReport = new XuLyReport();
-                        xuLyReport.GetReport(input, dt, pdfStream);
+                      
 
                         byte[] pdfBytes = pdfStream.ToArray();
 
@@ -1122,8 +1203,8 @@ namespace APIServerNFC.API_Admin
             public bool Quydoichitiet { get; set; }
         }
 
-        [HttpPost]
-        public async Task SendMsgPrintAsync(string id, string topic, DataTable dt)
+    
+        private async Task SendMsgPrintAsync(string id, string topic, DataTable dt)
         {
             InPhieuJson inPhieuJson = new InPhieuJson();
             try
@@ -1145,6 +1226,33 @@ namespace APIServerNFC.API_Admin
             catch (Exception ex)
             {
                 inPhieuJson.msg = "Lưu thành công nhưng không in được :" + ex.Message;
+            }
+
+        }
+
+        private async Task SendMsgKyDuyetAsync(GetDataFromSql getDataFromSql, DataTable dt)
+        {
+            JsonMsgAndroid jsonMsgAndroid = new JsonMsgAndroid();
+            try
+            {
+                InPhieuJson inPhieuJson = new InPhieuJson();
+                inPhieuJson.ketqua = "OK";
+                inPhieuJson.dtsource = dt;
+                inPhieuJson.id = getDataFromSql.id;
+                inPhieuJson.topic = getDataFromSql.topic;
+                inPhieuJson.jsondata = getDataFromSql.jsondata;
+                inPhieuJson.typename = getDataFromSql.jsondataclassname;
+
+                jsonMsgAndroid.typemsg = getDataFromSql.id;
+                jsonMsgAndroid.message = inPhieuJson.ToJson();
+                jsonMsgAndroid.topic = getDataFromSql.topic;
+
+                await _hubContext.Clients.Group(jsonMsgAndroid.topic).SendAsync("ReceiveMessage", jsonMsgAndroid.ToJson());
+
+            }
+            catch (Exception ex)
+            {
+                jsonMsgAndroid.message = "Lưu thành công nhưng lỗi gửi tin nhắn :" + ex.Message;
             }
 
         }

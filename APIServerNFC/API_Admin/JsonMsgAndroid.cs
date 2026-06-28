@@ -19,12 +19,20 @@ namespace APIServerNFC.API_Admin
         }
         public string typemsg { get; set; }
     }
+    public class SendMsgJson
+    {
+        public string id { get; set; }
+        public string topic { get; set; }
+        public string classname { get; set; }
+        public string jsondata { get; set; }
+    }
     public class InPhieuJson
     {
         public string id { get; set; }
         public string topic { get; set; }
         public string tablename { get; set; }
         public string msg { get; set; }
+        public string jsondata { get; set; }
         public string typename { get; set; }
         public string ketqua { get; set; }
         public string ToJson()

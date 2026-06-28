@@ -10,9 +10,9 @@ using static APIServerNFC.Api_Report.XuLyTonKhoGiaoNhan;
 
 namespace APIServerNFC.Api_Report
 {
-    public partial class XtraRp_PhieuGiaoNhanNoiBo_TonKho : DevExpress.XtraReports.UI.XtraReport
+    public partial class XtraRp_PhieuGiaoNhanNoiBo_TonKho_OneColor : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraRp_PhieuGiaoNhanNoiBo_TonKho()
+        public XtraRp_PhieuGiaoNhanNoiBo_TonKho_OneColor()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace APIServerNFC.Api_Report
         {
             // Build dictionary từ querymau
                 querymau = querymau_;
-              //_maxColors = querymau.Max(x => x.Index)+1; // +1 vì index bắt đầu từ 0
+           
               var maxmau = querymau.Max(p => p.Index);//Lấy số lượng màu của sản phẩm có nhiều màu nhất để tạo cột
             if (maxmau == 0)
                 return; // Nếu chỉ có 1 màu thì không cần tạo cột động
@@ -46,11 +46,6 @@ namespace APIServerNFC.Api_Report
                 //dtsource.Columns.Add("MaMau_" + i, typeof(string));
             }
             _maxColors = maxmau;
-            
-           
-            // Tạo danh sách cột
-
-
             // Thêm cột động vào report
             AddDynamicColorColumns(
                 xrTableRowHeader1,      // header row 1

@@ -1,22 +1,22 @@
 ﻿using APIServerNFC.Api_Report;
-
+using DocumentFormat.OpenXml.Office2010.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
-using System.Net.Http.Headers;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
-using Microsoft.Extensions.Caching.Memory;
 
 
 
@@ -253,6 +253,78 @@ namespace APIServerNFC.API_Admin
                     if (lstParameter.topic != null && lstParameter.id != null)//Có gửi message để in
                     {
                         _ = SendMsgPrintAsync(lstParameter.id, lstParameter.topic, dt);
+
+                    }
+
+                    dt.Dispose();
+
+                }
+                catch (Exception ex)
+                {
+                    DataTable dtex = new DataTable();
+                    dtex.Columns.Add("ketquaexception", typeof(string));
+                    DataRow dataRow = dtex.NewRow();
+                    dataRow["ketquaexception"] = ex.Message;
+                    dtex.Rows.Add(dataRow);
+                    jsonoutput = JsonConvert.SerializeObject(dtex);
+                }
+                //object ob = new JsonResult(lstsp);
+                return Content(jsonoutput);
+
+            }
+        }
+
+        [HttpPost]
+        [Route("ProcedureWithExceptionEncryptKyDuyet")]
+        public async Task<IActionResult> ProcedureWithExceptionEncryptKyDuyet([FromBody] GetDataFromSql lstParameter)
+        {
+            string sql = prs.Decrypt(lstParameter.sql);
+            //string sql = lstParameter.sql;
+            // List<SqlParameter> lst = listParameter.lstparameter;
+            string json = lstParameter.json;
+            string jsonoutput = "";
+            await using (SqlConnection sqlConnection = prs.Connect())
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                try
+                {
+                    List<ParameterDefine> lstpara = JsonConvert.DeserializeObject<List<ParameterDefine>>(json);
+
+                    foreach (var it in lstpara)
+                    {
+                        if (it.ParameterValue != null)
+                        {
+                            if (it.Type == "DataTable")
+                            {
+
+                                DataTable dttmp = JsonConvert.DeserializeObject<DataTable>(it.ParameterValue.ToString());
+                                sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, dttmp));
+                                //dttmp.Clear();
+
+                            }
+                            else
+                            {
+                                sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, it.ParameterValue));
+                            }
+                        }
+                        else
+                            sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, DBNull.Value));
+
+                        //sqlCommand.Parameters.Add(new SqlParameter(it.ParameterName, it.ParameterValue));
+                    }
+                    sqlCommand.CommandText = sql;
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = prs.dt_sqlcmd(sqlCommand, sqlConnection);
+                    sqlConnection.Close();
+                    sqlCommand.Parameters.Clear();
+                    sqlCommand.Dispose();
+                    jsonoutput = JsonConvert.SerializeObject(dt);
+                  
+                    if (lstParameter.topic != null && lstParameter.id != null)//Có gửi message để in
+                    {
+                        _ = SendMsgKyDuyetAsync(lstParameter, dt);
 
                     }
 
@@ -1053,7 +1125,28 @@ namespace APIServerNFC.API_Admin
         }
 
         [HttpPost]
-        public async Task SendMsgPrintAsync(string id, string topic, DataTable dt)
+        [Route("SendMsgJson")]
+        public async Task SendMsgJsonToTopicAsync([FromBody] SendMsgJson sendMsgJson)
+        {
+            JsonMsgAndroid jsonMsgAndroid = new JsonMsgAndroid();
+            try
+            {
+               
+                jsonMsgAndroid.topic = sendMsgJson.topic;
+                jsonMsgAndroid.typemsg = sendMsgJson.classname;// classname;
+                jsonMsgAndroid.message = sendMsgJson.jsondata;
+                await _hubContext.Clients.Group(sendMsgJson.topic).SendAsync("ReceiveMessage", jsonMsgAndroid.ToJson());
+                
+            }
+            catch (Exception ex)
+            {
+                jsonMsgAndroid.message = "Lưu thành công nhưng không in được :" + ex.Message;
+            }
+
+        }
+
+        
+        private async Task SendMsgPrintAsync(string id, string topic, DataTable dt)
         {
             InPhieuJson inPhieuJson = new InPhieuJson();
             try
@@ -1062,6 +1155,7 @@ namespace APIServerNFC.API_Admin
                 inPhieuJson.dtsource = dt;
                 inPhieuJson.id = id;
                 inPhieuJson.topic = topic;
+               
                 string jsonoutputprint = JsonConvert.SerializeObject(inPhieuJson);
                 JsonMsgAndroid jsonMsgAndroid = new JsonMsgAndroid();
                 jsonMsgAndroid.typemsg = "print";
@@ -1075,6 +1169,32 @@ namespace APIServerNFC.API_Admin
             catch (Exception ex)
             {
                 inPhieuJson.msg = "Lưu thành công nhưng không in được :" + ex.Message;
+            }
+
+        }
+        private async Task SendMsgKyDuyetAsync(GetDataFromSql getDataFromSql,DataTable dt)
+        {
+            JsonMsgAndroid jsonMsgAndroid = new JsonMsgAndroid();
+            try
+            {
+                InPhieuJson inPhieuJson = new InPhieuJson();
+                inPhieuJson.ketqua = "OK";
+                inPhieuJson.dtsource = dt;
+                inPhieuJson.id = getDataFromSql.id;
+                inPhieuJson.topic = getDataFromSql.topic;
+                inPhieuJson.jsondata = getDataFromSql.jsondata;
+                inPhieuJson.typename= getDataFromSql.jsondataclassname;
+
+                jsonMsgAndroid.typemsg = getDataFromSql.id;
+                jsonMsgAndroid.message =  inPhieuJson.ToJson();
+                jsonMsgAndroid.topic = getDataFromSql.topic;
+               
+                await _hubContext.Clients.Group(jsonMsgAndroid.topic).SendAsync("ReceiveMessage", jsonMsgAndroid.ToJson());
+                
+            }
+            catch (Exception ex)
+            {
+                jsonMsgAndroid.message = "Lưu thành công nhưng lỗi gửi tin nhắn :" + ex.Message;
             }
 
         }
